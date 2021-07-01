@@ -9,7 +9,7 @@
     --color-border: rgb(var(--palette-border));
     --color-accent: rgb(var(--palette-accent));
 
-    transition: var(--transition-duration) opacity;
+    transition: var(--transition-duration);
     position: fixed;
     top: 0;
     left: 0;
@@ -27,7 +27,7 @@
 }
 
 .modal .inner {
-    transition: var(--transition-duration) transform;
+    transition: var(--transition-duration);
     position: absolute;
     box-sizing: border-box;
     max-height: 90%;
@@ -101,6 +101,7 @@
 
 .modal .content {
     justify-content: flex-start;
+    column-gap: var(--box-padding-inner);
 }
 
 .modal .content p {
@@ -111,11 +112,9 @@
     --size: 40px;
 
     width: var(--size);
-    height: var(--size);
     padding: 20px;
     background-color: rgba(var(--palette-accent),.1);
     border-radius: 9px;
-    margin-right: var(--box-padding-inner);
 }
 
 .modal .content svg path {
@@ -153,17 +152,5 @@
 @media screen and (prefers-color-scheme: dark) {
     .modal {
         background: rgba(0,0,0,.7);
-    }
-
-	.modal .langSelect a:hover {
-		background-color: rgba(var(--palette-accent),.3);
-	}
-
-	.modal .header .close {
-		--background-color: 255,255,255;
-	}
-
-    .modal .header .close .line {
-        background: white;
     }
 }
